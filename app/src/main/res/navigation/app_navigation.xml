@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_navigation"
+    app:startDestination="@id/chooseRoleFragment">
+
+    <fragment
+        android:id="@+id/chooseRoleFragment"
+        android:name="com.codesses.holp.common.views.fragments.ChooseRoleFragment"
+        android:label="@string/choose_role_fragment"
+        tools:layout="@layout/fragment_choose_role">
+        <action
+            android:id="@+id/action_choose_role_fragment_to_user_main_fragment"
+            app:destination="@id/userMainFragment" />
+
+        <action
+            android:id="@+id/action_choose_role_fragment_to_driver_main_fragment"
+            app:destination="@id/driver_main_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userMainFragment"
+        android:name="com.codesses.holp.user.views.fragment.UserMainFragment"
+        android:label="@string/user_main_fragment"
+        tools:layout="@layout/fragment_user_main">
+        <action
+            android:id="@+id/action_userMainFragment_to_busListBottomSheet"
+            app:destination="@id/busListBottomSheet" />
+    </fragment>
+    <fragment
+        android:id="@+id/driver_main_fragment"
+        android:name="com.codesses.holp.driver.views.fragments.DriverMainFragment"
+        android:label="@string/driver_main_fragment"
+        tools:layout="@layout/fragment_driver_main">
+        <action
+            android:id="@+id/action_driver_main_fragment_to_tripFragment"
+            app:destination="@id/tripFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/busListBottomSheet"
+        android:name="com.codesses.holp.user.views.dialog.BusListBottomSheetDialog"
+        android:label="@string/bus_list_bottom_sheet"
+        tools:layout="@layout/bottom_sheet_dialog_bus_list">
+        <action
+            android:id="@+id/action_busListBottomSheet_to_busDetailsFragment"
+            app:destination="@id/busDetailsFragment" />
+        <argument
+            android:name="startLat"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="startLng"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="endLat"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="endLng"
+            android:defaultValue="0.0"
+            app:argType="float" />
+    </dialog>
+    <fragment
+        android:id="@+id/busDetailsFragment"
+        android:name="com.codesses.holp.user.views.fragment.BusDetailsFragment"
+        android:label="@string/fragment_bus_details"
+        tools:layout="@layout/fragment_bus_details">
+        <argument
+            android:name="startLat"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="startLng"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="endLat"
+            android:defaultValue="0.0"
+            app:argType="float" />
+        <argument
+            android:name="endLng"
+            android:defaultValue="0.0"
+            app:argType="float" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tripFragment"
+        android:name="com.codesses.holp.driver.views.fragments.TripFragment"
+        android:label="fragment_trip"
+        tools:layout="@layout/fragment_trip" />
+
+
+</navigation>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey0"
+    tools:context=".driver.views.fragments.DriverMainFragment">
+
+    <include
+        android:id="@+id/includeHeader"
+        layout="@layout/header_bg_white_content_black" />
+
+    <TextView
+        android:id="@+id/tvTitleBusNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/basiercircle_medium"
+        android:text="@string/bus_no"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includeHeader" />
+
+    <EditText
+        android:id="@+id/etBusNo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/drawable_white_rounded_corner_5dp"
+        android:fontFamily="@font/basier_circle"
+        android:hint="@string/enter_bus_no"
+        android:inputType="number"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:textSize="@dimen/_12ssp"
+        android:translationZ="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleBusNo" />
+
+    <TextView
+        android:id="@+id/tvTitleBusNoPlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/basiercircle_medium"
+        android:text="@string/bus_no_plate"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etBusNo" />
+
+    <EditText
+        android:id="@+id/etBusNoPlate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/drawable_white_rounded_corner_5dp"
+        android:fontFamily="@font/basier_circle"
+        android:hint="@string/enter_bus_no_plate"
+        android:inputType="text"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:textSize="@dimen/_12ssp"
+        android:translationZ="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleBusNoPlate" />
+
+    <Button
+        android:id="@+id/btnStartTrip"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginHorizontal="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:backgroundTint="@color/black"
+        android:enabled="false"
+        android:text="@string/start_trip"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/etBusNoPlate"
+        app:layout_constraintStart_toStartOf="@id/etBusNoPlate"
+        app:layout_constraintTop_toBottomOf="@id/etBusNoPlate" />
+</androidx.constraintlayout.widget.ConstraintLayout>

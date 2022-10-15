@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "130538884592",
+    "project_id": "holp-bus-tracking",
+    "storage_bucket": "holp-bus-tracking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130538884592:android:50236fbf73798221c62135",
+        "android_client_info": {
+          "package_name": "com.codesses.holp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130538884592-01r50ml9p8e8uv7n9t87em1sa8bma3sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpRHpATIXdoWK7BkjL1IaXMlC_wpKVskk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130538884592-01r50ml9p8e8uv7n9t87em1sa8bma3sv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

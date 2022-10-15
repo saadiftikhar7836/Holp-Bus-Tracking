@@ -1,0 +1,33 @@
+<!--
+  ~
+  ~ Created by Saad Iftikhar on 9/16/21, 6:13 PM
+  ~ Copyright (c) 2021. All rights reserved
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="360dp"
+    android:height="640dp"
+    android:viewportWidth="360"
+    android:viewportHeight="640">
+    <path android:pathData="M10,0L350,0A10,10 0,0 1,360 10L360,630A10,10 0,0 1,350 640L10,640A10,10 0,0 1,0 630L0,10A10,10 0,0 1,10 0z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="-103.059"
+                android:endY="479.347"
+                android:startX="180"
+                android:startY="640"
+                android:type="linear">
+                <item
+                    android:color="#000000"
+                    android:offset="0" />
+                <item
+                    android:color="#000000"
+                    android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M122,249h115v141h-115z" />
+
+</vector>

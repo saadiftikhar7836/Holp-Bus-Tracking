@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Holp Bus Tracking</string>
+
+    <string name="user">User</string>
+    <string name="driver">Driver</string>
+    <string name="choose_location">Choose Location</string>
+
+    <string name="choose_current_loc">Choose current location</string>
+    <string name="current_loc">Current location</string>
+    <string name="dest_loc">Destination location</string>
+    <string name="choose_dest_loc">Choose destination location</string>
+
+
+    <string name="google_map_api_key">AIzaSyBNHJo1Sd6mkN_vAWXxem6ellSOcX-kz2I</string>
+
+    <string name="done">Done</string>
+    <string name="enter_bus_details">Enter bus details</string>
+    <string name="bus_no">Bus number</string>
+    <string name="bus_no_plate">Bus no plate</string>
+    <string name="enter_bus_no">Enter bus no</string>
+    <string name="enter_bus_no_plate">Enter bus no plate</string>
+    <string name="start_trip">Start trip</string>
+    <string name="available_buses">Available Buses</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_bus_details">Fragment Bus Details</string>
+    <string name="bus_list_bottom_sheet">Bus List Bottom Sheet</string>
+    <string name="driver_main_fragment">Driver Main Fragment</string>
+    <string name="user_main_fragment">User Main Fragment</string>
+    <string name="choose_role_fragment">Choose Role Fragment</string>
+    <string name="end_trip">End Trip</string>
+
+</resources>
