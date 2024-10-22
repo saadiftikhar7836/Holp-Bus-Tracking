@@ -26,10 +26,9 @@ class StartupActivity : AppCompatActivity() {
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.mainHostFragment) as NavHostFragment
-
+        val isTripStarted = SharedStorage.getBoolean("isTripStarted", false)
         val navController = navHostFragment.findNavController()
-
-        if (SharedStorage.isTripStarted()) {
+        if (isTripStarted) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 startForegroundService(
                     Intent(this, MyLocationService::class.java)

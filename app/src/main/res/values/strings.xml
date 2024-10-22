@@ -11,8 +11,10 @@
     <string name="choose_dest_loc">Choose destination location</string>
 
 
-    <string name="google_map_api_key">AIzaSyBNHJo1Sd6mkN_vAWXxem6ellSOcX-kz2I</string>
+    <!--    <string name="google_map_api_key">AIzaSyBNHJo1Sd6mkN_vAWXxem6ellSOcX-kz2I</string>-->
 
+    <!--    ELPR-->
+    <string name="google_map_api_key">AIzaSyAHbNPtLlsTYAQ7kpjrvyneK5GjG8xZRoc</string>
     <string name="done">Done</string>
     <string name="enter_bus_details">Enter bus details</string>
     <string name="bus_no">Bus number</string>

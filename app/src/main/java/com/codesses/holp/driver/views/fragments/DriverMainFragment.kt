@@ -8,6 +8,7 @@ import android.os.Build.VERSION.SDK_INT
 import android.os.Build.VERSION_CODES.O
 import android.os.Bundle
 import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -62,10 +63,23 @@ class DriverMainFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupView()
+
+    }
+
+    private fun setupView() {
+        if (SharedStorage.isTripStarted()) {
+            findNavController().navigate(
+                DriverMainFragmentDirections.actionDriverMainFragmentToTripFragment()
+            )
+            return
+        }
+
         checkLocationPermission()
+        addTextChangedListeners()
+
         binding.includeHeader.ivBackPress.setOnClickListener(this)
         binding.btnStartTrip.setOnClickListener(this)
-        addTextChangedListeners()
     }
 
     private fun addTextChangedListeners() {
@@ -189,11 +203,11 @@ class DriverMainFragment : Fragment(), View.OnClickListener {
         FirestoreRef.getActiveBus(getBusId()).get()
             .addOnSuccessListener {
                 if (it.exists()) {
-                    progressDialog.dismiss()
-                    requireActivity().showToast("This bus already in use")
-                } else {
-                    createTrip()
-                }
+                    if (it.get("is_bus_busy") == 1) {
+                        progressDialog.dismiss()
+                        requireActivity().showToast("This bus already in use")
+                    } else createTrip()
+                } else createTrip()
             }
     }
 

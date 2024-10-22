@@ -28,6 +28,7 @@ import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.Autocomplete
 import com.google.android.libraries.places.widget.AutocompleteActivity
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
+import kotlin.properties.Delegates
 
 
 class UserMainFragment : Fragment(), View.OnClickListener {
@@ -148,7 +149,6 @@ class UserMainFragment : Fragment(), View.OnClickListener {
 
     private fun setupView() {
         binding.includeHeader.tvTitle.text = requireActivity().getString(R.string.choose_location)
-        val r=binding.includeHeader
 
         binding.mapView.getMapAsync {
             map = it
